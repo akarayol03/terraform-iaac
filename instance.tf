@@ -3,6 +3,9 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro" 
   associate_public_ip_address = true
   key_name = aws_key_pair.deployer.key_name
+  root_block_device {
+      volume_size = 25
+  }
   user_data = file("userdata_file")
   
 tags = { 
@@ -15,6 +18,9 @@ resource "aws_instance" "web2" {
   instance_type = "t2.micro" 
   associate_public_ip_address = true
   key_name = aws_key_pair.deployer.key_name
+  root_block_device {
+      volume_size = 25
+  }
   user_data = file("userdata_file")
   
 tags = { 
@@ -27,6 +33,9 @@ resource "aws_instance" "web3" {
   instance_type = "t2.micro" 
   associate_public_ip_address = true
   key_name = aws_key_pair.deployer.key_name
+  root_block_device {
+      volume_size = 25
+  }
   user_data = file("userdata_file")
   
 tags = { 
@@ -39,6 +48,9 @@ resource "aws_instance" "web4" {
   instance_type = "t2.micro" 
   associate_public_ip_address = true
   key_name = aws_key_pair.deployer.key_name
+  root_block_device {
+      volume_size = 25
+  }
   user_data = file("userdata_file")
   
 tags = { 
