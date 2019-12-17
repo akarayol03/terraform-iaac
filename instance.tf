@@ -3,7 +3,7 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro" 
   associate_public_ip_address = true
   key_name = aws_key_pair.deployer.key_name
-  security_groups = "sg-17856248"
+  security_groups = sg-17856248
   user_data = file("userdata_file")
   
 tags = { 
@@ -16,7 +16,7 @@ resource "aws_instance" "web2" {
   instance_type = "t2.micro" 
   associate_public_ip_address = true
   key_name = aws_key_pair.deployer.key_name
-  security_groups = "sg-17856248"
+  security_groups = sg-17856248
   user_data = file("userdata_file")
   
 tags = { 
@@ -29,7 +29,7 @@ resource "aws_instance" "web3" {
   instance_type = "t2.micro" 
   associate_public_ip_address = true
   key_name = aws_key_pair.deployer.key_name
-  security_groups = "sg-17856248"
+  security_groups = sg-17856248
   user_data = file("userdata_file")
   
 tags = { 
@@ -42,7 +42,7 @@ resource "aws_instance" "web4" {
   instance_type = "t2.micro" 
   associate_public_ip_address = true
   key_name = aws_key_pair.deployer.key_name
-  security_groups = "sg-17856248"
+  security_groups = sg-17856248
   user_data = file("userdata_file")
   
 tags = { 
