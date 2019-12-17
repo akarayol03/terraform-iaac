@@ -1,4 +1,10 @@
 #!/bin/bash
 
-yum install httpd -y
-yum install telnet -y
+Yum update -y
+yum install java-1.8.0-openjdk.x86_642.Java-version3 
+yum install wget
+Wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.2.4.rpm
+sudo rpm-ivh elasticsearch-6.2.4.rpm
+systemctl enable elasticsearch.service
+service elasticsearch start
+sudo service elasticsearch status
