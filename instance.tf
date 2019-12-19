@@ -9,6 +9,6 @@ resource "aws_instance" "web" {
   user_data = file("userdata_file")
   
 tags = { 
-    Name = "Elk1" 
+    Name = "web" 
   } 
 }
