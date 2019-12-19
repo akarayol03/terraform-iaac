@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "mybucket"
+    bucket = "backend-state-ahmet-tf"
     key    = "infrastructure"
     region = "us-east-1"
   }
