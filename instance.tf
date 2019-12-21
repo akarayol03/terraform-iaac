@@ -1,4 +1,3 @@
-farrukhsadykov 12:28 PM
 resource "aws_instance" "web" {
   count = var.count_instance
   ami             = var.ami
