@@ -16,13 +16,10 @@ resource "aws_instance" "web" {
         "sudo yum install -y epel-release",
         "sudo yum install httpd -y ",
         "sudo systemctl start httpd",
+        "sudo systemctl enable httpd",
         ]
       }
-  provisioner "local-exec" {
-    command = "echo ${aws_instance.web.public_ip} >> public_ips.txt"
-    command = "wget -O /tmp  https://wordpress.org/latest.zip"
-    command  = "mkdir /tmp/test"
-  }
+      
   lifecycle{
     prevent_destroy = false
   }
