@@ -1,3 +1,4 @@
+farrukhsadykov 12:28 PM
 resource "aws_instance" "web" {
   count = var.count_instance
   ami             = var.ami
@@ -7,9 +8,9 @@ resource "aws_instance" "web" {
   security_groups = ["allow_ssh"]
   provisioner "remote-exec" {
     connection {
-      host        = self.public_ip
-      type        = "ssh"
-      user        = var.user
+      host = self.public_ip
+      type = "ssh"
+      user = var.user
       private_key = file(var.ssh_key_location)
       }
       inline = [
